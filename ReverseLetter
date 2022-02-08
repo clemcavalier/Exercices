@@ -1,0 +1,26 @@
+package project;
+
+public class ReverseLetter {
+
+    public static String reverse(String str) {
+    	
+    	String res = "";
+    	
+    	 for (int i=1 ;  i<=str.length() ; i++ ) {
+    	     
+    	     res += str.charAt(str.length() - i);
+    	     
+    	     System.out.println(res);
+    	     
+    	 }
+    	return res;
+    }	
+    	
+
+	public static void main(String[] args) {
+    	String rev = reverse("WayToLearnX");
+    	System.out.print(rev);
+    	
+    }
+
+}

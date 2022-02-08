@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class AireEtPerimetre {
+    
+  public static void calculer_aire_per(double rayon){
+    double perimetre = 2*Math.PI*rayon ;
+    double aire = Math.PI*rayon*rayon ;
+    
+    System.out.println("Le périmètre est = " + perimetre);
+    System.out.println("L’aire est = " + aire);
+    
+  }
+    
+  public static void main(String[] args) {
+    calculer_aire_per(4.2);
+  }
+}

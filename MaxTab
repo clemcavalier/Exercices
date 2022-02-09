@@ -1,0 +1,23 @@
+package project;
+
+public class MaxTab {
+    
+    public static int maximum(int[] tab) {
+        int max = tab [0];
+    	for ( int i : tab ) {
+    		System.out.println("for" + max);
+    	    if (i>max) {
+    	        max = i;
+    	        System.out.println("if" + max);
+    	    }
+    	}
+    	
+    	return max;
+    }	
+    	
+    public static void main(String[] args) {
+    	int[] tab = {1, 2, 9, 4};
+    	int max = maximum(tab);
+    	System.out.print(max);
+    }
+}

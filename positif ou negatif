@@ -1,0 +1,32 @@
+package firstproject;
+
+import java.util.Scanner;
+
+public class Main {
+
+
+	public static void main(String[] args) {
+	        
+		Scanner saisieUtilisateur = new Scanner(System.in);
+		
+		System.out.println("Veuillez saisir un nombre entier :");
+		int number = saisieUtilisateur.nextInt();
+		
+		
+		
+		if (number==0) {
+			System.out.println("0 n'est ni négatif, ni positif, il est nul !");
+		} else if (number>0) {
+			System.out.println("le nombre est positif");
+		} else if (number<0) {
+			System.out.println("le nombre est négatif");
+		}
+		
+		}		
+			
+	}
+
+/*	Voici mon tout premier programme réalisé avce java
+ 	le but étant que le programme indique si le nombre entré dans la console
+est positif, nul, ou negatif.
+*/

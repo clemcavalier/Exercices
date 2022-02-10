@@ -1,0 +1,69 @@
+package project;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void check() {
+
+		Scanner saisieUtilisateur1 = new Scanner(System.in);
+		Scanner saisieUtilisateur2 = new Scanner(System.in);
+		String error = "erreur";
+
+		System.out.println(
+				"veuillez saisir 1 pour savoir si votre nombre est négatif, ou 2 pour savoir transformer une phrase en majuscule");
+
+		try {
+
+			int number1 = saisieUtilisateur1.nextInt();
+
+			if (number1 == 1) {
+				System.out.println("vous avez saisi 1, veuillez à présent saisir un nombre entier :");
+
+				try {
+
+					int number2 = saisieUtilisateur2.nextInt();
+
+					if (number2 == 0) {
+						System.out.println("0 n'est ni négatif, ni positif, il est nul !");
+					} else if (number2 > 0) {
+						System.out.println("le nombre est positif");
+					} else if (number2 < 0) {
+						System.out.println("le nombre est négatif");
+					}
+
+				} catch (Exception e) {
+					System.out.println(error);
+					check();
+
+				}
+
+			} else if (number1 == 2) {
+				System.out.println("vous avez saisi 2, veuillez à présent saisir une phrase en minuscule :");
+				String phrase1 = saisieUtilisateur2.nextLine();
+				System.out.println(phrase1.toUpperCase());
+
+			} else if (number1 != 1 | number1 != 2) {
+				System.out.println(error);
+				check();
+			}
+
+		}
+
+		catch (Exception e) {
+			System.out.println(error);
+			check();
+		}
+
+		saisieUtilisateur1.close();
+		saisieUtilisateur2.close();
+
+	}
+
+	public static void main(String[] args) {
+
+		check();
+
+	}
+
+}

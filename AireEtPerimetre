@@ -12,6 +12,6 @@ public class AireEtPerimetre {
   }
     
   public static void main(String[] args) {
-    calculer_aire_per(4.2);
+    calculer_aire_per(4.5);
   }
 }
